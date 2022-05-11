@@ -38,7 +38,7 @@ func producer(items ...item) <-chan item {
 	return out
 }
 
-//this function proccesing our data and then giving back a channel to read out to see what the resualt is
+//this function proccesing our data, then giving back a processed channel 
 func disscount(items <-chan item) <-chan item {
 	out := make(chan item)
 	go func() {
